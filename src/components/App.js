@@ -5,14 +5,12 @@ const App = () => {
 
   let [count, setCount] = useState(0);
 
-  const incrementHandler=()=>{
-    setCount(count + 1);
-  }
+
 
   return (
     <div class="ball">
-      <h1 class="count">{count}</h1>
-      <button onClick={incrementHandler}>Increment</button>
+      <h1 class="count" onDoubleClick={()=>{alert("cant edit it")}}>{count}</h1>
+      <button className="increment-button" onClick={()=>{setCount(count + 1)}}>Increment</button>
     </div>
   )
 }
